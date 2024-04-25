@@ -9,7 +9,4 @@ clean:
 	-rm -rf figures/*
 	-rm -rf python/__pycache__
 
-paper:
-	@cd paper && latexmk --synctex=1 -xelatex -pdf main
-
 .PHONY: all clean paper
