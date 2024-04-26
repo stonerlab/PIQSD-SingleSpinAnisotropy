@@ -37,7 +37,7 @@
 
     "related_identifiers": [
         {
-            "identifier": "https://github.com/stonerlab/PIQSD-SingleSpinBz",
+            "identifier": "https://github.com/stonerlab/PIQSD-SingleSpinAnisotropy",
             "relation": "isSupplementTo"
         },
         {

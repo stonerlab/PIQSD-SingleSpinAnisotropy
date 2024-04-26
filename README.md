@@ -1,6 +1,5 @@
 
-[![DOI](https://zenodo.org/badge/{github_id}.svg)](https://zenodo.org/badge/latestdoi/{github_id})
-
+[![DOI](https://zenodo.org/badge/791746137.svg)](https://zenodo.org/doi/10.5281/zenodo.11072984)
 # Sources for: Path integral spin dynamics for quantum paramagnets
 
 This repository contains source code which implements a path integral approach to calculate the thermodynamics of quantum spin for a quantum paramagnet with easy axis along the applied field direction and with compressive/tensile stress along the same direction. It contains functions for analytic solutions and a numerical approach based on atomistic spin dynamics. 
