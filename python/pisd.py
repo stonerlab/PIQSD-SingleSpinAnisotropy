@@ -19,7 +19,7 @@ parser.add_argument('--approximation',
 parser.add_argument('--order',
                     type=int,
                     default=2,
-                    help='order of the approximation-scheme, unused for classical-limit')
+                    help='order of the approximation-scheme, unused for classical-limit or quantum-exact')
 
 parser.add_argument('--spin',
                     type=float,
