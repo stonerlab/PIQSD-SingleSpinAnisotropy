@@ -31,7 +31,7 @@ def main():
     num_realisation = 20
     equilibration_time = 5  # Equilibration time ns
     production_time = 15  # Final time ns
-    time_step = 0.00001  # Time step ns, "linspace" so needs to turn num into int
+    time_step = 0.00005  # Time step ns, "linspace" so needs to turn num into int
 
     a_0 = stress
     a_1 = asd.g_factor * asd.muB * field

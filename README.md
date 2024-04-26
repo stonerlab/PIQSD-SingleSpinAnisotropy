@@ -81,14 +81,14 @@ matplotlib style file for plotting figures with fonts and font sizes similar to 
 
 ## Computational Environment
 
-All calculations were performed on a MacBook Pro (Quad-Core Intel Core i5 2GHz, 16GB RAM, Model Identifier: MacBookPro16,2) running macOS version 11.7.4 (Big Sur). Python and associated packages were installed using conda. The installed package versions were:
+All calculations were performed on a Mac Studio (Apple M2 Ultra, 64GB RAM, Model Identifier: Mac14,14) running macOS version 14.4.1 (Sonoma). Python and associated packages were installed using conda. The installed package versions were:
 
- - python=3.10
+ - python=3.10.12
  - matplotlib=3.6.2
- - numba=0.56.4
+ - numba=0.59.0
  - numpy=1.23.5
  - scipy=1.9.3
- - sympy=1.11.1
+ - sympy=1.12.1rc1
   
 The conda environment can be recreated using the `environment.yml` file on .
 
@@ -96,81 +96,75 @@ The conda environment can be recreated using the `environment.yml` file on .
   <summary>Click here for the complete list of package installed by conda including all dependencies and hashes</summary>
 ```text
 # Name                    Version                   Build  Channel
-blas                      1.0                         mkl  
-bottleneck                1.3.5            py38h67323c0_0  
-brotli                    1.0.9                hca72f7f_7  
-brotli-bin                1.0.9                hca72f7f_7  
-ca-certificates           2023.01.10           hecd8cb5_0  
-certifi                   2022.12.7        py38hecd8cb5_0  
-contourpy                 1.0.5            py38haf03e11_0  
-cycler                    0.11.0             pyhd3eb1b0_0  
-fftw                      3.3.9                h9ed2024_1  
-fonttools                 4.25.0             pyhd3eb1b0_0  
-freetype                  2.12.1               hd8bbffd_0  
-giflib                    5.2.1                haf1e3a3_0  
-gmp                       6.2.1                he9d5cce_3  
-gmpy2                     2.1.2            py38hd5de756_0  
-importlib-metadata        4.11.3           py38hecd8cb5_0  
-importlib_metadata        4.11.3               hd3eb1b0_0  
-intel-openmp              2021.4.0          hecd8cb5_3538  
-jpeg                      9e                   hca72f7f_0  
-kiwisolver                1.4.4            py38hcec6c5f_0  
-lcms2                     2.12                 hf1fd2bf_0  
-lerc                      3.0                  he9d5cce_0  
-libbrotlicommon           1.0.9                hca72f7f_7  
-libbrotlidec              1.0.9                hca72f7f_7  
-libbrotlienc              1.0.9                hca72f7f_7  
-libcxx                    14.0.6               h9765a3e_0  
-libdeflate                1.8                  h9ed2024_5  
-libffi                    3.4.2                hecd8cb5_6  
-libgfortran               5.0.0           11_3_0_hecd8cb5_28  
-libgfortran5              11.3.0              h9dfd629_28  
-libllvm11                 11.1.0               h46f1229_6  
-libpng                    1.6.37               ha441bb4_0  
-libtiff                   4.5.0                h2cd0358_0  
-libwebp                   1.2.4                h56c3ce4_0  
-libwebp-base              1.2.4                hca72f7f_0  
-llvm-openmp               14.0.6               h0dcd299_0  
-llvmlite                  0.39.1           py38h8346a28_0  
-lz4-c                     1.9.4                hcec6c5f_0  
-matplotlib                3.6.2            py38hecd8cb5_0  
-matplotlib-base           3.6.2            py38h220de94_0  
-mkl                       2021.4.0           hecd8cb5_637  
-mkl-service               2.4.0            py38h9ed2024_0  
-mkl_fft                   1.3.1            py38h4ab4a9b_0  
-mkl_random                1.2.2            py38hb2f4e1b_0  
-mpc                       1.1.0                h6ef4df4_1  
-mpfr                      4.0.2                h9066e36_1  
-mpmath                    1.2.1            py38hecd8cb5_0  
-munkres                   1.1.4                      py_0  
-ncurses                   6.3                  hca72f7f_3  
-numba                     0.56.4           py38h07fba90_0  
-numexpr                   2.8.4            py38he696674_0  
-numpy                     1.23.5           py38he696674_0  
-numpy-base                1.23.5           py38h9cd3388_0  
-openssl                   1.1.1t               hca72f7f_0  
-packaging                 22.0             py38hecd8cb5_0  
-pandas                    1.5.2            py38h07fba90_0  
-pillow                    9.3.0            py38h81888ad_1  
-pip                       22.3.1           py38hecd8cb5_0  
-pyparsing                 3.0.9            py38hecd8cb5_0  
-python                    3.8.16               h218abb5_2  
-python-dateutil           2.8.2              pyhd3eb1b0_0  
-pytz                      2022.7           py38hecd8cb5_0  
-readline                  8.2                  hca72f7f_0  
-scipy                     1.9.3            py38h3d31255_0  
-setuptools                65.6.3           py38hecd8cb5_0  
-six                       1.16.0             pyhd3eb1b0_1  
-sqlite                    3.40.1               h880c91c_0  
-sympy                     1.11.1           py38hecd8cb5_0  
-tbb                       2021.6.0             ha357a0b_1  
-tk                        8.6.12               h5d9f67b_0  
-tornado                   6.2              py38hca72f7f_0  
-wheel                     0.37.1             pyhd3eb1b0_0  
-xz                        5.2.10               h6c40b1e_0  
-zipp                      3.11.0           py38hecd8cb5_0  
-zlib                      1.2.13               h4dc903c_0  
-zstd                      1.5.2                hcb37349_0  
+brotli                    1.1.0                hb547adb_0    conda-forge
+brotli-bin                1.1.0                hb547adb_0    conda-forge
+bzip2                     1.0.8                h3422bc3_4    conda-forge
+ca-certificates           2023.7.22            hf0a4a13_0    conda-forge
+certifi                   2023.7.22          pyhd8ed1ab_0    conda-forge
+contourpy                 1.1.1           py310h38f39d4_0    conda-forge
+cycler                    0.11.0             pyhd8ed1ab_0    conda-forge
+fonttools                 4.42.1          py310h2aa6e3c_0    conda-forge
+freetype                  2.12.1               hadb7bae_2    conda-forge
+gmp                       6.2.1                h9f76cd9_0    conda-forge
+gmpy2                     2.1.2           py310h2e6cad2_1    conda-forge
+kiwisolver                1.4.5           py310h38f39d4_1    conda-forge
+lcms2                     2.15                 h40e5a24_2    conda-forge
+lerc                      4.0.0                h9a09cb3_0    conda-forge
+libblas                   3.9.0           18_osxarm64_openblas    conda-forge
+libbrotlicommon           1.1.0                hb547adb_0    conda-forge
+libbrotlidec              1.1.0                hb547adb_0    conda-forge
+libbrotlienc              1.1.0                hb547adb_0    conda-forge
+libcblas                  3.9.0           18_osxarm64_openblas    conda-forge
+libcxx                    16.0.6               h4653b0c_0    conda-forge
+libdeflate                1.19                 hb547adb_0    conda-forge
+libffi                    3.4.2                h3422bc3_5    conda-forge
+libgfortran               5.0.0           13_2_0_hd922786_1    conda-forge
+libgfortran5              13.2.0               hf226fd6_1    conda-forge
+libjpeg-turbo             2.1.5.1              hb547adb_1    conda-forge
+liblapack                 3.9.0           18_osxarm64_openblas    conda-forge
+libllvm11                 11.1.0               hfa12f05_5    conda-forge
+libopenblas               0.3.24          openmp_hd76b1f2_0    conda-forge
+libpng                    1.6.39               h76d750c_0    conda-forge
+libsqlite                 3.43.0               hb31c410_0    conda-forge
+libtiff                   4.6.0                h77c4dce_1    conda-forge
+libwebp-base              1.3.2                hb547adb_0    conda-forge
+libxcb                    1.15                 hf346824_0    conda-forge
+libzlib                   1.2.13               h53f4e23_5    conda-forge
+llvm-openmp               16.0.6               h1c12783_0    conda-forge
+llvmlite                  0.42.0                   pypi_0    pypi
+matplotlib                3.6.2           py310hb6292c7_0    conda-forge
+matplotlib-base           3.6.2           py310h78c5c2f_0    conda-forge
+mpc                       1.3.1                h91ba8db_0    conda-forge
+mpfr                      4.2.0                he09a6ba_0    conda-forge
+mpmath                    1.3.0              pyhd8ed1ab_0    conda-forge
+munkres                   1.1.4              pyh9f0ad1d_0    conda-forge
+ncurses                   6.4                  h7ea286d_0    conda-forge
+numba                     0.59.0                   pypi_0    pypi
+numpy                     1.23.5          py310h5d7c261_0    conda-forge
+openjpeg                  2.5.0                h4c1507b_3    conda-forge
+openssl                   3.1.3                h53f4e23_0    conda-forge
+packaging                 23.1               pyhd8ed1ab_0    conda-forge
+pillow                    10.0.1          py310hadb9e77_1    conda-forge
+pip                       23.2.1             pyhd8ed1ab_0    conda-forge
+pthread-stubs             0.4               h27ca646_1001    conda-forge
+pyparsing                 3.1.1              pyhd8ed1ab_0    conda-forge
+python                    3.10.12         h01493a6_0_cpython    conda-forge
+python-dateutil           2.8.2              pyhd8ed1ab_0    conda-forge
+python_abi                3.10                    4_cp310    conda-forge
+readline                  8.2                  h92ec313_1    conda-forge
+scipy                     1.9.3           py310ha0d8a01_2    conda-forge
+setuptools                68.2.2             pyhd8ed1ab_0    conda-forge
+six                       1.16.0             pyh6c4a22f_0    conda-forge
+sympy                     1.12.1rc1                pypi_0    pypi
+tk                        8.6.12               he1e0b03_0    conda-forge
+tornado                   6.3.3           py310h2aa6e3c_1    conda-forge
+tzdata                    2023c                h71feb2d_0    conda-forge
+unicodedata2              15.0.0          py310h8e9501a_0    conda-forge
+wheel                     0.41.2             pyhd8ed1ab_0    conda-forge
+xorg-libxau               1.0.11               hb547adb_0    conda-forge
+xorg-libxdmcp             1.1.3                h27ca646_0    conda-forge
+xz                        5.2.6                h57fd34a_0    conda-forge
+zstd                      1.5.5                h4f39d0f_0    conda-forge
 ```
 </details>
 
@@ -194,7 +188,7 @@ Note that the the atomistic spin dynamics are stochastic so the results will dif
 - python/figure_c.py: 1511.157 (s)
 - python/figure_d.py: 1520.961 (s)
 - python/figure2_a.py: 702.361 (s)
-- python/figure2_b.py: 3493,378 (s)
+- python/figure2_b.py: 3493.378 (s)
 - python/figure2_c.py: 3202.851 (s)
 - python/figure2_d.py: 2923.927 (s)
 - python/figure3.py: 0.220 (s)
