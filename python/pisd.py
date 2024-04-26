@@ -62,15 +62,15 @@ def main():
 
     # Temperature parameters
     temperatures = np.linspace(0.07, 5, 50)
-    num_realisation = 4
+    num_realisation = 5
 
     # Initial conditions
     s0 = np.array([1 / np.sqrt(3), 1.0 / np.sqrt(3), -1.0 / np.sqrt(3)])  # Initial spin
 
     # Equilibration time, final time and time step
-    equilibration_time = 1  # Equilibration time ns
-    production_time = 10  # Final time ns
-    time_step = 0.00001  # Time step ns, "linspace" so needs to turn num into int
+    equilibration_time = 5  # Equilibration time ns
+    production_time = 15  # Final time ns
+    time_step = 0.00005  # Time step ns, "linspace" so needs to turn num into int
 
     solver = asd.solver_factory(integrator, approximation, order, qs, a_1, a_2, alpha, time_step)
     sz = asd.compute_temperature_dependence(solver, temperatures, approximation, qs, time_step,
