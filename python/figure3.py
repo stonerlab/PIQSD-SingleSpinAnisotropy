@@ -26,28 +26,26 @@ def main():
     a_2 = K - a_0
 
     # --- calculate and save exact quantum solution ---
-    quantum_solution = analytic.quantum_state_sz(quantum_spin, temperatures, a_0, a_1, a_2)
+    quantum_expectation = analytic.quantum_state_sz(quantum_spin, temperatures, a_0, a_1, a_2)
     np.savetxt(f"{data_path}/analytical_quantum_state_solution_s{quantum_spin:.1f}.tsv",
-               np.column_stack((temperatures, quantum_solution)), fmt='%.8e',
+               np.column_stack((temperatures, quantum_expectation)), fmt='%.8e',
                header='temperature_kelvin sz-expectation_hbar')
 
-    quantum_solution_square = analytic.quantum_state_sz_square(quantum_spin, temperatures, a_0, a_1, a_2)
+    quantum_expectation_squared = analytic.quantum_state_sz_square(quantum_spin, temperatures, a_0, a_1, a_2)
     np.savetxt(f"{data_path}/analytical_quantum_state_square_solution_s{quantum_spin:.1f}.tsv",
-               np.column_stack((temperatures, quantum_solution)), fmt='%.8e',
+               np.column_stack((temperatures, quantum_expectation)), fmt='%.8e',
                header='temperature_kelvin sz-expectation-square_hbar')
 
-    second_order_moment = analytic.quantum_state_sz_second_order_moment(quantum_spin, temperatures, a_0, a_1, a_2)
+    quantum_square_expectation = analytic.quantum_state_sz_second_order_moment(quantum_spin, temperatures, a_0, a_1, a_2)
     np.savetxt(f"{data_path}/analytical_quantum_state_variance_solution_s{quantum_spin:.1f}.tsv",
-               np.column_stack((temperatures, quantum_solution)), fmt='%.8e',
+               np.column_stack((temperatures, quantum_expectation)), fmt='%.8e',
                header='temperature_kelvin sz-square-expectation_hbar')
 
-    result = np.sqrt(np.abs(quantum_solution_square-second_order_moment)) / (quantum_solution * quantum_spin)
-    # result2 = second_order_moment / second_order_moment[0]
+    result = np.sqrt((quantum_square_expectation-quantum_expectation_squared))/quantum_spin
 
     # --- plotting ---
-    plt.plot(temperatures, quantum_solution, label='quantum solution', color="red")
-    plt.plot(temperatures, result, linestyle=(0, (4, 6)), label='thermal fluctuations', color="blue")
-    # plt.plot(temperatures, result2, linestyle=(0, (4, 6)), label='thermal fluctuations', color="blue")
+    plt.plot(temperatures, quantum_expectation, label='quantum solution', color="red")
+    plt.plot(temperatures, result, linestyle=(0, (4, 6)), label=r"$\sqrt{\langle\langle\hat{S}^{2}_z\rangle\rangle}/s$", color="blue")
 
 
 
@@ -55,8 +53,8 @@ def main():
     plt.ylabel(r"$\langle\hat{S}_z\rangle/s$ ($\hbar$)")
     plt.legend(title=rf'$s={str(Fraction(quantum_spin))}$')
 
-    # plt.show()
-    plt.savefig('figures/figure3.pdf', transparent=True)
+    plt.show()
+    # plt.savefig('figures/figure3.pdf', transparent=True)
 
 
 if __name__ == "__main__":
