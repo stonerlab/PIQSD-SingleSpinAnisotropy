@@ -14,9 +14,9 @@ m = Symbol('\mu_B', real=True)
 
 
 def quantum_state_sz(quantum_spin, temperature, a_0, a_1, a_2):
-    """Returns the expectation value of z component of spin computed by
+    """Returns the normalised expectation value of z component of spin computed by
 
-    <S_z>=(Sum_[m=-s..s] <s,m|m*exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)
+    <S_z>=(1/s)*(Sum_[m=-s..s] <s,m|m*exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)
                                             /(Sum_[m=-s..s] <s,m|exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)
     """
     denominator = np.zeros(np.array(temperature).shape)
@@ -33,8 +33,8 @@ def quantum_state_sz(quantum_spin, temperature, a_0, a_1, a_2):
 def quantum_state_sz_square(quantum_spin, temperature, a_0, a_1, a_2):
     """Returns the expectation value of z component of spin computed by
 
-    <S_z>=(Sum_[m=-s..s] <s,m|m*exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)
-                                            /(Sum_[m=-s..s] <s,m|exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)
+    <S_z>^2=[(Sum_[m=-s..s] <s,m|m*exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)
+                                            /(Sum_[m=-s..s] <s,m|exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)]^2
     """
     denominator = np.zeros(np.array(temperature).shape)
     for q_m in np.arange(-quantum_spin, quantum_spin + 1):
@@ -50,7 +50,7 @@ def quantum_state_sz_square(quantum_spin, temperature, a_0, a_1, a_2):
 def quantum_state_sz_second_order_moment(quantum_spin, temperature, a_0, a_1, a_2):
     """Returns the expectation value of z component of spin computed by
 
-    <S_z>=(Sum_[m=-s..s] <s,m|m*exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)
+    <(S_z)^2>=(Sum_[m=-s..s] <s,m|m**2 * exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)
                                             /(Sum_[m=-s..s] <s,m|exp(beta * (A_0 + A_1 * m + A_2 * m^2))|s,m>)
     """
     denominator = np.zeros(np.array(temperature).shape)
@@ -140,7 +140,7 @@ def generate_field_function_exact(quantum_spin):
 
     Usable as:
 
-    effective_field = generate_field_function(quantum_spin, order)
+    effective_field = generate_field_function_exact(quantum_spin)
     effective_field(beta, A_2, A_1, n_z, g, mu_B)
 
     """
