@@ -53,8 +53,8 @@ def main():
     plt.ylabel(r"$\langle\hat{S}_z\rangle/s$ ($\hbar$)")
     plt.legend(title=rf'$s={str(Fraction(quantum_spin))}$')
 
-    plt.show()
-    # plt.savefig('figures/figure3.pdf', transparent=True)
+    # plt.show()
+    plt.savefig('figures/figure3.pdf', transparent=True)
 
 
 if __name__ == "__main__":
