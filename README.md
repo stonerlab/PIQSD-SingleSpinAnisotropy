@@ -189,15 +189,15 @@ Note that the the atomistic spin dynamics are stochastic so the results will dif
 
 ### Runtimes
 
-- python/figure_a.py: 0.939 (s)
-- python/figure_b.py: 0.939 (s)
-- python/figure_c.py: 0.939 (s)
-- python/figure_d.py: 0.939 (s)
-- python/figure2_a.py: 2923.927 (s)
-- python/figure2_b.py: 2923.927 (s)
-- python/figure2_c.py: 2923.927 (s)
+- python/figure_a.py: 1529.213 (s)
+- python/figure_b.py: 1401.299 (s)
+- python/figure_c.py: 1511.157 (s)
+- python/figure_d.py: 1520.961 (s)
+- python/figure2_a.py: 702.361 (s)
+- python/figure2_b.py: 3493,378 (s)
+- python/figure2_c.py: 3202.851 (s)
 - python/figure2_d.py: 2923.927 (s)
-- python/figure3.py: 1502.845 (s)
+- python/figure3.py: 0.205 (s)
 
 ## Code use for general calculations
 

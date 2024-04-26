@@ -10,8 +10,8 @@ import analytic
 
 
 def main():
-    plt.style.use('../resources/aps-paper.mplstyle')
-    data_path = '../figures/figure3_data'
+    plt.style.use('resources/aps-paper.mplstyle')
+    data_path = 'figures/figure3_data'
     os.makedirs(data_path, exist_ok=True)
 
     # Simulation conditions
@@ -55,8 +55,8 @@ def main():
     plt.ylabel(r"$\langle\hat{S}_z\rangle/s$ ($\hbar$)")
     plt.legend(title=rf'$s={str(Fraction(quantum_spin))}$')
 
-    plt.show()
-    # plt.savefig('../figures/figure3.pdf', transparent=True)
+    # plt.show()
+    plt.savefig('figures/figure3.pdf', transparent=True)
 
 
 if __name__ == "__main__":
