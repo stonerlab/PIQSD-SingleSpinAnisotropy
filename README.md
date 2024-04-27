@@ -57,9 +57,6 @@ Calculates and plots the quantum analytic results and approximate results for th
 **python/figure2_{a,b,c,d}.py**
 Calculates and plots the quantum analytic results and approximate results for the "exact" quantum correction using the logarithm form of the Hamiltonian of the atomistic approximation method. Expectation value of Sz for s={1/2, 1, 3/2, 2} as a function of temperature. 
 
-**python/figure3.py**
-Calculates and plots the quantum analytic results and the fluctuations of the quantum system from the partition function as sqrt(<S_z^2>-<S_z>^2)/s. Expectation value and fluctuations of Sz for s=5/2 as a function of temperature. 
-
 ### ./figures/
 
 Output generated from the python/figure*X*.py scripts. 
@@ -190,7 +187,6 @@ Note that the the atomistic spin dynamics are stochastic so the results will dif
 - python/figure2_b.py: 783.914 (s)
 - python/figure2_c.py: 750.803 (s)
 - python/figure2_d.py: 793.125 (s)
-- python/figure3.py: 0.220 (s)
 
 ## Code use for general calculations
 

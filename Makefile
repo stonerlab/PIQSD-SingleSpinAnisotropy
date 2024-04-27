@@ -7,8 +7,7 @@ all: figures/figure_a.pdf \
 		figures/figure2_a.pdf \
 		figures/figure2_b.pdf \
 		figures/figure2_c.pdf \
-		figures/figure2_d.pdf \
-		figures/figure3.pdf
+		figures/figure2_d.pdf
 
 figures/figure%.pdf: python/figure%.py
 	$(CONDA_ACTIVATE) quantum_spin_dynamics && python $< >> $(@:.pdf=.log) 2>&1
